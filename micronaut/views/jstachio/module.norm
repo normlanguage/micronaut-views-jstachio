@@ -1,0 +1,14 @@
+Module module() {
+  return module(
+    name: "micronaut.views.jstachio",
+    version: 1,
+    dependencies: [
+      exportedDependency(repository: "github", name: "jstachio.annotation", version: 1),
+      dependency(repository: "github", name: "jstachio.processor", version: 1)
+    ],
+    binding: jarBinding(
+      target: mavenJar(group: "io.micronaut.views", artifact: "micronaut-views-jstachio", version: "6.2.0", resolution: sha256("a3c90bf4de7e20a917b776fdd7c5b4de8dceec24485abf18f77988a281a72dda")),
+      api: []
+    )
+  )
+}
