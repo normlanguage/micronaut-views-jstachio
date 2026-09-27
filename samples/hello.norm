@@ -1,0 +1,36 @@
+import jstachio.annotation.JStache
+import micronaut.http.annotation.Controller
+import micronaut.http.annotation.Get
+import micronaut.http.annotation.QueryValue
+import micronaut.web.MicronautApplication
+import micronaut.web.MicronautConfig
+import micronaut.web.Micronaut
+import micronaut.web.Server
+import std.application.Application
+
+@JStache(template: "<h1>Hello, {{name}}!</h1><ul>{{#items}}<li>{{.}}</li>{{/items}}</ul>")
+public value GreetingPage {
+  String name
+  List<String> items
+}
+
+@Controller("/sample")
+public class PageRoutes {
+  @Get(value: "/hello", produces: ["text/html"])
+  GreetingPage hello(@QueryValue(defaultValue: "Norm") String name) {
+    return GreetingPage(name: name, items: ["typed view", "escaped text"])
+  }
+}
+
+Module module() {
+  module(dependencies: [
+    dependency(repository: "github", name: "micronaut.web", version: 7),
+    dependency(repository: "github", name: "micronaut.views.jstachio", version: 2)
+  ])
+}
+
+public Application application() {
+  return MicronautApplication(config: MicronautConfig(
+    micronaut: Micronaut(server: Server(host: "127.0.0.1", port: 18768))
+  ))
+}
