@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-[hello.norm](hello.norm) 是 `micronaut.views.jstachio@2` 的单文件消费者。带注解的页面模型通过真实 Micronaut HTTP 响应渲染类型化列表，并对用户输入做 HTML 转义。服务仅监听 `127.0.0.1:18768`。
+[hello.norm](hello.norm) 是 `micronaut.views.jstachio@3` 的单文件消费者。带注解的页面模型通过真实 Micronaut HTTP 响应渲染类型化列表，并对用户输入做 HTML 转义。服务仅监听 `127.0.0.1:18768`。
 
 在仓库根目录运行：
 
