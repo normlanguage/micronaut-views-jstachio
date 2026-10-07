@@ -17,15 +17,15 @@ public value GreetingPage {
 @Controller("/sample")
 public class PageRoutes {
   @Get(value: "/hello", produces: ["text/html"])
-  GreetingPage hello(@QueryValue(defaultValue: "Norm") String name) {
+  public GreetingPage hello(@QueryValue(defaultValue: "Norm") String name) {
     return GreetingPage(name: name, items: ["typed view", "escaped text"])
   }
 }
 
 Module module() {
   module(dependencies: [
-    dependency(repository: "github", name: "micronaut.web", version: 9),
-    dependency(repository: "github", name: "micronaut.views.jstachio", version: 2)
+    dependency(repository: "github", name: "micronaut.web", version: 10),
+    dependency(repository: "github", name: "micronaut.views.jstachio", version: 3)
   ])
 }
 

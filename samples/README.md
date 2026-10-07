@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-[hello.norm](hello.norm) is a single-file consumer of `micronaut.views.jstachio@2`. Its annotated page model renders a typed list and escapes user-supplied text through a real Micronaut HTTP response. The server binds only to `127.0.0.1:18768`.
+[hello.norm](hello.norm) is a single-file consumer of `micronaut.views.jstachio@3`. Its annotated page model renders a typed list and escapes user-supplied text through a real Micronaut HTTP response. The server binds only to `127.0.0.1:18768`.
 
 From the repository root, run:
 
