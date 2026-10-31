@@ -24,8 +24,8 @@ public class PageRoutes {
 
 Module module() {
   module(dependencies: [
-    dependency(repository: "github", name: "micronaut.web", version: 10),
-    dependency(repository: "github", name: "micronaut.views.jstachio", version: 3)
+    dependency(repository: "github", name: "micronaut.web", version: 11),
+    dependency(repository: "github", name: "micronaut.views.jstachio", version: 4)
   ])
 }
 
